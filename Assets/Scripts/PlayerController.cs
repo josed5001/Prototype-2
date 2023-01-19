@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
-    public float speed = 10f;
+    public float speed = 30f;
     public float xRange = 10;
     public GameObject projectilePrefab;
 

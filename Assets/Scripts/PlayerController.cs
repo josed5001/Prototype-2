@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
-    public float speed = 30f;
-    public float xRange = 10;
+    public float speed = 40f;
+    public float xRange = 20;
     public GameObject projectilePrefab;
 
 
@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Pizza spawn 
         if (transform.position.x < -xRange)
         {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
@@ -33,7 +34,12 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            // Launch a Projectile from the Player
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        }
+        if (Input.GetKeyDown(KeyCode.L))
         {
             // Launch a Projectile from the Player
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);

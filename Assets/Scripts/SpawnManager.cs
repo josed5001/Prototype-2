@@ -13,6 +13,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Code for spawning random animal as its own VOID.
         InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
     }
 
@@ -24,6 +25,7 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnRandomAnimal() 
     {
+        // The ranges of animals spawning
         int animalIndex = Random.Range(0, animalPrefabs.Length);
          Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
 

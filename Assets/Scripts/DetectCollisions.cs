@@ -19,6 +19,7 @@ public class DetectCollisions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // If the Object hits the animal, Both objects gets destroyed
         Destroy(gameObject);
         Destroy(other.gameObject);
     }

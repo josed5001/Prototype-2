@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
     public float speed = 40f;
-    public float xRange = 20;
+    public float xRange = 10;
     public GameObject projectilePrefab;
 
 
@@ -36,12 +36,12 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            // Launch a Projectile from the Player
+            // Launch a Projectile from the Player using the Keyletter "K"
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
-            // Launch a Projectile from the Player
+            // Launch a Projectile from the Player using the Keyletter "L"
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
 
